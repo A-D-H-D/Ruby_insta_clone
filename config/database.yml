@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: 5
+  username: root
+  password: 1234
+  socket: /run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: insta_clone_development
+
+test:
+  <<: *default
+  database: insta_clone_test
+
+production:
+  <<: *default
+  database: insta_clone_production
+  username: insta_clone
+  password: <%= ENV['INSTAC_CLONE_DATABASE_PASSWORD'] %>
