@@ -3,7 +3,9 @@
     
 
   <h1>New post</h1>
-
+    <div class='field form-group'>
+      <%= form.text_field :user_id, type: 'hidden', value:current_user.id %>
+    </div>
     <div class='field form-group'>
       <% invalid = post.errors.include?(:title)%>
       <%= form.label :title, style: "display: block" %>

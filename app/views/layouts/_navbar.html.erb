@@ -21,6 +21,10 @@
               <%= link_to "Edit account",  edit_user_registration_path, class:'nav-link'%>
           </li> 
 
+          <li class="nav-item">
+              <%= link_to "View my posts", posts_myposts_path, class:'nav-link'%>
+          </li>       
+
           <% else %>
           <li class="nav-item">
               <%= link_to "Sign up", new_user_registration_path, class:'nav-link'%>
